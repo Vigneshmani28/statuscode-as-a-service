@@ -118,8 +118,6 @@ app.get("/", (req, res) => {
       ],
       deterministic: "/status/:code",
       information: "/status/:code/info",
-      categories: "/categories",
-      common: "/common"
     }
   });
 });
