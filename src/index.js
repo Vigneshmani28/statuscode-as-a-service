@@ -22,7 +22,7 @@ app.use(express.json());
 
 const limiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 5,
+  max: 120,
   keyGenerator: (req) => {
     const ip =
       req.headers["cf-connecting-ip"] ||
