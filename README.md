@@ -212,4 +212,8 @@ curl -I http://localhost:3000/status/random
 - Start a discussion for feature requests
 - Check the examples folder for usage patterns
 
+## 📄 License
+
+MIT — do whatever.
+
 **Note:** This service is for testing purposes only. Do not use in production for critical functionality.

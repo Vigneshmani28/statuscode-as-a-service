@@ -8,7 +8,7 @@
     "dev": "node --watch src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vigneshmani28",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
