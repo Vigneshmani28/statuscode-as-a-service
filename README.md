@@ -7,9 +7,12 @@ A professional HTTP status code simulation API for frontend development, QA test
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/Express-5.x-000000?logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/status-active-success.svg" alt="Status" />
-  <img src="https://img.shields.io/badge/type-HTTP%20API-orange.svg" alt="API Type" />
+  <img src="https://img.shields.io/badge/Rate%20Limit-120%20req%2Fmin-blue.svg" alt="Rate Limit" />
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
+  <img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status" />
+  <img src="https://img.shields.io/badge/Type-HTTP%20API-orange.svg" alt="API Type" />
 </p>
+
 
 ## GitAds Sponsored
 [![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vigneshmani28/statuscode-as-a-service@github)](https://gitads.dev/v1/ad-track?source=vigneshmani28/statuscode-as-a-service@github)
