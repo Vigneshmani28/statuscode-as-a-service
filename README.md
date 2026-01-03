@@ -1,8 +1,4 @@
-
-# Status Code As a Service (SCaaS)
-
-  <img src="https://raw.githubusercontent.com/Vigneshmani28/statuscode-as-a-service/refs/heads/main/assets/img/scaas_banner.png" alt="scaas.png" />
-A professional HTTP status code simulation API for frontend development, QA testing, and chaos engineering. Test your application's error handling with realistic HTTP response codes.
+<img src="https://raw.githubusercontent.com/Vigneshmani28/statuscode-as-a-service/refs/heads/main/assets/img/scaas_banner.png" alt="scaas.png" />
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white" alt="Node.js" />
@@ -17,7 +13,8 @@ A professional HTTP status code simulation API for frontend development, QA test
 ## GitAds Sponsored
 [![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vigneshmani28/statuscode-as-a-service@github)](https://gitads.dev/v1/ad-track?source=vigneshmani28/statuscode-as-a-service@github)
 
-
+# Status Code As a Service (SCaaS)
+A professional HTTP status code simulation API for frontend development, QA testing, and chaos engineering. Test your application's error handling with realistic HTTP response codes.
 
 ## 🌟 Features
 
@@ -207,6 +204,15 @@ curl -v http://localhost:3000/status/503
 
 # Check rate limit headers
 curl -I http://localhost:3000/status/random
+```
+## 📁 Project Structure
+```
+status-code-as-a-service/
+├── src/
+│   ├── index.js                  # Application entry point
+│   ├── statuses.js               # HTTP status definitions & categories
+│   ├── weighted.js               # Weighted & preset-based status logic
+│   └── utils.js                  # Response builders & helper utilities
 ```
 ## 🤝 Contributing
 - Fork the repository
