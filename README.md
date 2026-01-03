@@ -212,6 +212,15 @@ curl -I http://localhost:3000/status/random
 - Start a discussion for feature requests
 - Check the examples folder for usage patterns
 
+## 😄 Inspired From
+
+Inspired by the legendary  
+👉 https://github.com/hotheadhacker/no-as-a-service
+
+If *No as a Service* taught the internet how to say **NO**,  
+**Status Code as a Service** teaches your API how to fail — professionally.
+
+
 ## 📄 License
 
 MIT — do whatever.
