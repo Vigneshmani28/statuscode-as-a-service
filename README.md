@@ -11,6 +11,11 @@ A professional HTTP status code simulation API for frontend development, QA test
   <img src="https://img.shields.io/badge/type-HTTP%20API-orange.svg" alt="API Type" />
 </p>
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vigneshmani28/statuscode-as-a-service@github)](https://gitads.dev/v1/ad-track?source=vigneshmani28/statuscode-as-a-service@github)
+
+
+
 ## 🌟 Features
 
 - **Complete HTTP Status Support**  
