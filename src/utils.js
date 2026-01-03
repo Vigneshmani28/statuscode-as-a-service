@@ -75,9 +75,23 @@ function getStatusDescription(code) {
   );
 }
 
+function sendStatusResponse(res, code, payload) {
+  if (code >= 100 && code < 200 && code !== 101) {
+    return res.status(200).json({
+      simulated: true,
+      simulated_status: code,
+      ...payload,
+      note: "1xx status codes are informational and cannot be sent as final HTTP responses"
+    });
+  }
+
+  return res.status(code).json(payload);
+}
+
 module.exports = {
   buildResponse,
   generateErrorResponse,
   getStatusDetails,
   getStatusDescription,
+  sendStatusResponse
 };

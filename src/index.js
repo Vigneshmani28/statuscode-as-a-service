@@ -11,7 +11,7 @@ const {
   getWeightedStatusByCategory,
   getWeightedStatusByPreset 
 } = require("./weighted");
-const { buildResponse, generateErrorResponse,getStatusDescription } = require("./utils");
+const { buildResponse, generateErrorResponse,getStatusDescription, sendStatusResponse } = require("./utils");
 const rateLimit = require("express-rate-limit");
 const { ipKeyGenerator } = require("express-rate-limit");
 
@@ -41,7 +41,7 @@ app.use(limiter);
 
 app.get("/status/random", (req, res) => {
   const code = STATUS_CODES[Math.floor(Math.random() * STATUS_CODES.length)];
-  res.status(code).json(buildResponse(code));
+  sendStatusResponse(res, code, buildResponse(code));
 });
 
 app.get("/status/random/:category", (req, res) => {
@@ -52,36 +52,39 @@ app.get("/status/random/:category", (req, res) => {
   
   const codes = STATUS_CATEGORIES[category];
   const code = codes[Math.floor(Math.random() * codes.length)];
-  res.status(code).json(buildResponse(code));
+  sendStatusResponse(res, code, buildResponse(code));
 });
 
 app.get("/status/weighted", (req, res) => {
   const { preset } = req.query;
   const code = preset ? getWeightedStatusByPreset(preset) : getWeightedStatus();
-  res.status(code).json(buildResponse(code));
+  sendStatusResponse(res, code, buildResponse(code));
 });
 
 app.get("/status/weighted/category", (req, res) => {
   const code = getWeightedStatusByCategory();
-  res.status(code).json(buildResponse(code));
+  sendStatusResponse(res, code, buildResponse(code));
 });
 
 app.get("/status/:code", (req, res) => {
   const code = Number(req.params.code);
   const { message } = req.query;
-  
+
   if (!STATUSES[code]) {
-    return res.status(400).json(generateErrorResponse(400, `Unsupported status code. Supported codes: ${STATUS_CODES.join(", ")}`));
+    return res
+      .status(400)
+      .json(generateErrorResponse(400, `Unsupported status code. Supported codes: ${STATUS_CODES.join(", ")}`));
   }
 
+  const response = buildResponse(code);
+
   if (message) {
-    const response = buildResponse(code);
     response.custom_message = message;
-    res.status(code).json(response);
-  } else {
-    res.status(code).json(buildResponse(code));
   }
+
+  sendStatusResponse(res, code, response);
 });
+
 
 app.get("/status/:code/info", (req, res) => {
   const code = Number(req.params.code);
