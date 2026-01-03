@@ -1,7 +1,7 @@
 
 # Status Code As a Service (SCaaS)
 
-  <img src="https://http.cat/images/200.jpg" alt="Node.js" />
+  <img src="https://raw.githubusercontent.com/Vigneshmani28/statuscode-as-a-service/refs/heads/main/assets/img/scaas_banner.png" alt="scaas.png" />
 A professional HTTP status code simulation API for frontend development, QA testing, and chaos engineering. Test your application's error handling with realistic HTTP response codes.
 
 <p align="center">
