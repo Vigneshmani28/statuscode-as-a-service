@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { 
   STATUSES, 
   STATUS_CODES, 
@@ -16,9 +17,21 @@ const rateLimit = require("express-rate-limit");
 const { ipKeyGenerator } = require("express-rate-limit");
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3000;
 app.set('trust proxy', true);
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET"],
+    allowedHeaders: ["Content-Type"],
+    maxAge: 86400
+  })
+);
+
+app.options("*", cors());
 
 const limiter = rateLimit({
   windowMs: 60 * 1000,
